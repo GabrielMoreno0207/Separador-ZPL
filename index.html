@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Separador ZPL - TOTVS Moda</title>
+  
+</head>
+<body>
+
+  <h2>🔧 Separador de Código ZPL - TOTVS Moda</h2>
+
+  <textarea id="inputZpl" placeholder="Cole aqui seu código ZPL..."></textarea>
+
+  <div class="btns">
+    <button onclick="separarZpl()">Separar</button>
+    <button onclick="limparTudo()">Limpar</button>
+  </div>
+
+  <div class="output">
+    <div class="bloco">
+      <h3>🟢 Início</h3>
+      <div id="parteInicial"></div>
+    </div>
+    <div class="bloco">
+      <h3>🟡 Corpo</h3>
+      <div id="parteCorpo"></div>
+    </div>
+    <div class="bloco">
+      <h3>🔴 Final</h3>
+      <div id="parteFinal"></div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
