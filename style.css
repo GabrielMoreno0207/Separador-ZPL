@@ -1,117 +1,116 @@
 :root {
-    --bg: #f9fafb;
-    --primary: #2563eb;
-    --text: #111827;
-    --card: #ffffff;
-    --border: #e5e7eb;
-    --hover: #f3f4f6;
-    --copied: #10b981;
-    --comment-bg: #fee2e2;
-  }
+  --bg: #f9fafb;
+  --primary: #2563eb;
+  --text: #111827;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --hover: #f3f4f6;
+  --comment-bg: #fee2e2;
+}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    padding: 2rem;
-  }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+}
 
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-  }
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
 
-  textarea {
-    width: 100%;
-    height: 160px;
-    padding: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    resize: vertical;
-    font-family: monospace;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    background-color: #fff;
-  }
+textarea {
+  width: 100%;
+  height: 160px;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
 
-  .btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 
-  button {
-    padding: 0.6rem 1.4rem;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
+button {
+  padding: 0.6rem 1.4rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
-  button:hover {
-    background-color: #1d4ed8;
-  }
+button:hover {
+  background-color: #1d4ed8;
+}
 
+.output {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bloco {
+  flex: 1 1 300px;
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.bloco h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.linha {
+  font-family: monospace;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  margin: 3px 0;
+  background-color: var(--hover);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.linha:hover {
+  background-color: #e0e7ff;
+}
+
+.comentario {
+  background-color: var(--comment-bg) !important;
+}
+
+@media (max-width: 768px) {
   .output {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
   }
-
-  .bloco {
-    flex: 1 1 300px;
-    background-color: var(--card);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    max-height: 400px;
-    overflow-y: auto;
-  }
-
-  .bloco h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    color: var(--primary);
-  }
-
-  .linha {
-    font-family: monospace;
-    font-size: 0.9rem;
-    padding: 6px 8px;
-    margin: 3px 0;
-    background-color: var(--hover);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-  }
-
-  .linha:hover {
-    background-color: #e0e7ff;
-  }
-
-  .comentario {
-    background-color: var(--comment-bg) !important;
-  }
-
-  @media (max-width: 768px) {
-    .output {
-      flex-direction: column;
-    }
-  }
+}
