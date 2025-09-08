@@ -23,9 +23,9 @@ function separarZpl() {
     renderizarBloco("parteInicial", inicio);
     renderizarBloco("parteCorpo", corpo);
     renderizarBloco("parteFinal", fim);
-  }
+}
 
-  function renderizarBloco(id, linhas) {
+function renderizarBloco(id, linhas) {
     const container = document.getElementById(id);
     container.innerHTML = "";
 
@@ -40,17 +40,20 @@ function separarZpl() {
       div.innerHTML = `<span>${linha}</span><span></span>`;
       div.ondblclick = () => {
         navigator.clipboard.writeText(linha).then(() => {
-          div.querySelector("span:last-child").textContent = "✅";
+          // Remove seleção de outras linhas
+          document.querySelectorAll(".linha").forEach(l => l.classList.remove("selecionada"));
+          div.classList.add("selecionada");
+          div.querySelector("span:last-child").textContent = "✅ Copiado!";
         });
       };
 
       container.appendChild(div);
     });
-  }
+}
 
-  function limparTudo() {
+function limparTudo() {
     document.getElementById("inputZpl").value = "";
     ["parteInicial", "parteCorpo", "parteFinal"].forEach(id => {
       document.getElementById(id).innerHTML = "";
     });
-  }
+}
